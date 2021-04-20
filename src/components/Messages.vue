@@ -1,3 +1,4 @@
 <template>
-    Chat goes here
+    <Message v-for="n in 10" :key="n"/>
+    <NewMessage/>
 </template>
