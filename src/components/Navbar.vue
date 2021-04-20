@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-blue-900 text-gray-300 py-4 shadow-xl">
+    <div class="fixed top-0 left-0 right-0 bg-blue-900 text-gray-300 shadow-xl py-4 z-10">
         <div class="container mx-auto flex justify-between items-center">
             <div class="brand flex space-x-3 text-2xl ">
                 <mdi:cat/>

@@ -24,7 +24,7 @@ export const database = () => {
     const messageQuery = messageCollection.orderBy('createdAt','desc').limit(100)
 
     const unsubscribe =  messageQuery.onSnapshot(s=>{
-        messages.value = s.docs.map(doc=>({id:s.id, ...doc.data})).reverse()
+        messages.value = s.docs.map(doc=>({id:doc.id, ...doc.data()})).reverse()
     })
     onUnmounted(unsubscribe)
     const sendMessage = text => {
@@ -32,8 +32,9 @@ export const database = () => {
         const {photoURL, uid, displayName} = user.value
         messageCollection.add({
             userName: displayName,
+            userId: uid,
             userPhotoURL: photoURL,
-            text: text,
+            text,
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),    
         })
     }
