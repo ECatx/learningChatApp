@@ -1,4 +1,5 @@
 <template>
+  <Navbar/>
   <div
     class="min-h-screen flex justify-center items-center text-coolGray-300 font-extralight space-x-4 text-6xl"
   >
