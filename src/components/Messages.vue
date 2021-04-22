@@ -1,7 +1,7 @@
 <template>
     <div class="mt-24">
         <Message v-for="(n , index) in messages" :key="index" :message="n"/>
-        <div ref="bottom" class="pb-16" />
+        <div class="pb-16" />
     </div>
     <NewMessage/>
 </template>
