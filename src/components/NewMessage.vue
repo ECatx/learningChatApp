@@ -12,8 +12,10 @@
     const {sendMessage} = database()
     const newMessage = ref(null)
     const send = () => {
+        if(newMessage.value?.length > 0){
             sendMessage(newMessage.value)
             newMessage.value = null 
+        }
 }
 
 </script>
